@@ -1,5 +1,43 @@
+/* 
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+ */
+
+:root {
+  /* Primary */
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+  /* Neutral */
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: normal;
+  font-weight: 400;
+  color: #555;
+}
+
 h1 {
   font-size: 5.6rem;
+  color: black;
 }
 
 h2 {
@@ -10,8 +48,20 @@ h2 {
 
 h3 {
   font-size: 2.2rem;
-  color: var(--Off-white);
   margin-bottom: 1.2rem;
+}
+
+footer {
+  text-align: center;
+}
+
+.topic:first-of-type {
+  padding-bottom: 2.6rem;
+}
+
+.topic:not(.topic:first-of-type) {
+  padding: 2.6rem 0;
+  border-top: 1px solid var(--Dark-grayish-blue);
 }
 
 .news {
@@ -23,7 +73,7 @@ h3 {
   font-size: 1.6rem;
 }
 
-.topic: .colorful-photo {
+.colorful-photo {
   width: 100%;
   margin-bottom: 3.6rem;
 }
@@ -78,17 +128,38 @@ h3 {
   line-height: 1.4;
   align-items: center;
 }
-
-.bright-text > a {
+/*----------------------------------- ACTIVE STATES --------------------------*/
+/* READ MORE BUTTON */
+.btn:link,
+.btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   background-color: var(--Soft-red);
   align-self: flex-start;
-  padding: 1.6rem 3.2rem;
+  padding: 1.6rem 3.6rem;
   color: var(--Off-white);
   font-weight: 700;
   letter-spacing: 3px;
 }
+
+.btn:hover,
+.btn:active {
+  background-color: black;
+}
+/*  */
+/* TOPICS LINKS */
+.h3-topic-link:link,
+.h3-topic-link:visited {
+  color: var(--Off-white);
+  text-decoration: none;
+}
+
+.h3-topic-link:hover,
+.h3-topic-link:active {
+  color: var(--Soft-orange);
+}
+
+/*----------------------------------- ACTIVE STATES --------------------------*/
 
 .big-number {
   font-size: 3.6rem;
@@ -115,11 +186,12 @@ h3 {
 }
 
 .article-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 13fr 30fr;
   gap: 1.6rem;
+  align-items: center;
 }
 
 .article-img {
-  max-width: 100px;
-  /* height: auto; */
+  width: 100%;
 }
