@@ -46,7 +46,7 @@ h2 {
   margin-bottom: 3.6rem;
 }
 
-h3 {
+.h3-titles {
   font-size: 2.2rem;
   margin-bottom: 1.2rem;
 }
@@ -95,7 +95,6 @@ footer {
   list-style: none;
   display: flex;
   gap: 5rem;
-  font-size: 1.8rem;
 }
 
 .header {
@@ -159,19 +158,44 @@ footer {
   color: var(--Soft-orange);
 }
 
+.article-title:link,
+.article-title:visited {
+  text-decoration: none;
+  font-size: 1.8rem;
+  display: inline-block;
+  font-weight: 700;
+  color: black;
+  margin: 1.4rem 0;
+}
+
+.article-title:hover,
+.article-title:active {
+  color: var(--Soft-red);
+}
+
+/* MENU  */
+.link-menu {
+  transition: 2s;
+}
+
+.link-menu:link,
+.link-menu:visited {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: var(--Dark-grayish-blue);
+}
+
+.link-menu:hover,
+.link-menu:active {
+  color: var(--Soft-red);
+}
+
 /*----------------------------------- ACTIVE STATES --------------------------*/
 
 .big-number {
   font-size: 3.6rem;
   font-weight: 500;
   color: var(--Grayish-blue);
-}
-
-.article-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--Very-dark-blue);
-  margin: 1.6rem 0;
 }
 
 .article-paragraph {
