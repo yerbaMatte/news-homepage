@@ -40,6 +40,11 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
+  line-height: normal;
   font-weight: 400;
   color: #555;
+}
+
+h1 {
+  color: black;
 }
