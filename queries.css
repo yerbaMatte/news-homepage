@@ -1,6 +1,50 @@
 /* 1em = 16px */
 
+/* DESKTOP */
 @media (max-width: 1200px) {
+  .bright-content > h1 {
+    font-size: 5rem;
+  }
+  .news {
+    padding: 1rem 2.2rem;
+  }
+}
+
+/* NETBOOKS AND big TABLETS */
+@media (max-width: 1065px) {
+  .bright-content > h1 {
+    font-size: 4.6rem;
+  }
+  .bright-text {
+    padding-left: 4rem;
+  }
+
+  .topic:first-of-type {
+    padding-bottom: 1.3rem;
+  }
+
+  .topic:not(.topic:first-of-type) {
+    padding: 1.3rem 0;
+    border-top: 1px solid var(--Dark-grayish-blue);
+  }
+
+  .article-title:link,
+  .article-title:visited {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+
+  .content-grid {
+    row-gap: 4.8rem;
+  }
+
+  .article-content {
+    align-self: start;
+  }
+}
+
+/* SMARTPHONES AND smaller TABLETS */
+@media (max-width: 900px) {
   body {
     background-color: yellow;
   }
