@@ -43,9 +43,80 @@
   }
 }
 
-/* SMARTPHONES AND smaller TABLETS */
+/* SMARTPHONES AND smaller TABLETS ------- BURGER menu   ----------*/
 @media (max-width: 900px) {
-  body {
-    background-color: yellow;
+  /* 900px area triggered? */
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+  }
+  .nav-box {
+    background-color: rgba(17, 17, 18, 0.752);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+
+    /* -------- Hiding nav box  -----------*/
+    /* 1. Turn the opacity off */
+    opacity: 0;
+    /* 2. Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+    /* 3. Hide it from the screen readers */
+    visibility: hidden;
+  }
+  /* ------------- nav-box changes opacity if .nav-open exists !!!!!!!!!!!!!!!! ------------------ */
+  .nav-open .nav-box {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name='close-outline'] {
+    display: block;
+    color: white;
+  }
+
+  .nav-open .icon-mobile-nav[name='menu-outline'] {
+    display: none;
+  }
+
+  .nav-open .btn-mobile-nav {
+    z-index: 1000;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+  .link-menu:link,
+  .link-menu:visited {
+    font-size: 4.8rem;
+    color: white;
+  }
+}
+
+@media (max-width: 750px) {
+  .articles {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .article-img {
+    height: 15rem;
+    width: auto;
+  }
+  .article-content {
+    gap: 3.6rem;
   }
 }

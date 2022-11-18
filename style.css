@@ -26,6 +26,7 @@ html {
   /* 10px / 16px = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -33,6 +34,7 @@ body {
   line-height: normal;
   font-weight: 400;
   color: #555;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -80,6 +82,7 @@ footer {
 
 .container {
   display: flex;
+  position: relative;
   height: 100vh;
 }
 
@@ -97,10 +100,15 @@ footer {
   gap: 5rem;
 }
 
+.icon-menu {
+  display: none;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 5em 0;
+  padding: 0 0 5rem 0;
+  align-items: center;
 }
 
 .content-grid {
@@ -174,9 +182,6 @@ footer {
 }
 
 /* MENU  */
-.link-menu {
-  transition: 2s;
-}
 
 .link-menu:link,
 .link-menu:visited {
@@ -190,6 +195,13 @@ footer {
   color: var(--Soft-red);
 }
 
+.buttons-menu {
+  /* visibility: hidden; */
+  display: none;
+  border: none;
+  background-color: transparent;
+  display: flex;
+}
 /*----------------------------------- ACTIVE STATES --------------------------*/
 
 .big-number {
@@ -220,8 +232,32 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .article-img {
   width: 100%;
+}
+
+/* BTN Mobile NAV*/
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 3.6rem;
+  width: 3.6rem;
+}
+
+/* .icon-mobile-nav[name='close-outline'] {
+  background-color: rgb(255, 255, 255);
+  opacity: 80%;
+  border-radius: 50%;
+} */
+
+.icon-mobile-nav[name='close-outline'] {
+  display: none;
 }

@@ -13,32 +13,37 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="queries.css" />
+    <script src="script.js" defer></script>
 
     <title>Frontend Mentor | News homepage</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <div class="container">
       <div class="content-container">
+        <!-- nav-open class -->
         <header class="header">
-          <div class="logo"><img src="/assets/images/logo.svg" /></div>
-          <ul class="menu">
-            <li><a href="#" class="link-menu">Home</a></li>
-            <li><a href="#" class="link-menu">New</a></li>
-            <li><a href="#" class="link-menu">Popular</a></li>
-            <li><a href="#" class="link-menu">Trending</a></li>
-            <li><a href="#" class="link-menu">Categories</a></li>
-          </ul>
+          <div class="logo"><img src="./assets/images/logo.svg" /></div>
+          <div class="nav-box">
+            <ul class="menu">
+              <li><a href="#" class="link-menu">Home</a></li>
+              <li><a href="#" class="link-menu">New</a></li>
+              <li><a href="#" class="link-menu">Popular</a></li>
+              <li><a href="#" class="link-menu">Trending</a></li>
+              <li><a href="#" class="link-menu">Categories</a></li>
+            </ul>
+          </div>
+          <button class="btn-mobile-nav">
+            <img
+              class="icon-mobile-nav"
+              name="menu-outline"
+              src="./assets/images/icon-menu.svg"
+            />
+            <img
+              class="icon-mobile-nav"
+              name="close-outline"
+              src="./assets/images/icon-menu-close.svg"
+            />
+          </button>
         </header>
         <div class="content-grid">
           <div class="bright_future">
@@ -143,11 +148,5 @@
         </div>
       </div>
     </div>
-    <footer>
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </footer>
   </body>
 </html>
